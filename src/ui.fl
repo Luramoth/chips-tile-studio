@@ -1,0 +1,184 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0305
+header_name {.h}
+code_name {.cxx}
+class UserInterface {open
+} {
+  Function {make_window()} {open
+  } {
+    Fl_Window {} {
+      label {Chips Tile Studio} open
+      xywh {27 222 1060 840} type Double align 80 visible
+    } {
+      Fl_Menu_Bar {} {
+        label menubar
+        xywh {0 0 1060 25} box GTK_UP_BOX align 5
+      } {
+        Submenu {} {
+          label File open
+          xywh {0 0 100 20}
+        } {
+          Submenu {} {
+            label Load open
+            xywh {0 0 70 21}
+          } {
+            MenuItem {} {
+              label {Tile set}
+              xywh {0 0 100 20}
+            }
+            MenuItem {} {
+              label {Tile map}
+              xywh {0 0 100 20}
+            }
+          }
+          Submenu {} {
+            label {Save as} open
+            xywh {0 0 100 20} divider
+          } {
+            MenuItem {} {
+              label {Tile set}
+              xywh {10 10 100 20}
+            }
+            MenuItem {} {
+              label {Tile map}
+              xywh {10 10 100 20}
+            }
+          }
+          Submenu {} {
+            label Export open
+            xywh {0 0 100 20}
+          } {
+            Submenu {} {
+              label {Tile set} open
+              xywh {0 0 100 20}
+            } {
+              MenuItem {} {
+                label {As C file..}
+                xywh {0 0 100 20}
+              }
+            }
+            Submenu {} {
+              label {Tile map} open
+              xywh {0 0 100 20}
+            } {
+              MenuItem {} {
+                label {As C file..}
+                xywh {0 0 100 20}
+              }
+            }
+          }
+          Submenu {} {
+            label Import open
+            xywh {0 0 100 20}
+          } {
+            MenuItem {} {
+              label {Tile set}
+              xywh {30 30 100 20}
+            }
+            MenuItem {} {
+              label {Tile map}
+              xywh {30 30 100 20}
+            }
+          }
+        }
+        Submenu {} {
+          label Edit open
+          xywh {0 0 100 20}
+        } {}
+        Submenu {} {
+          label Tools open
+          xywh {0 0 100 20}
+        } {}
+      }
+      Fl_Tabs {} {open
+        xywh {0 25 1210 820} box PLASTIC_THIN_UP_BOX
+      } {
+        Fl_Group {} {
+          label {Pallet editor} open
+          xywh {0 50 1210 795} align 5
+        } {
+          Fl_Menu_Bar {} {open
+            xywh {0 50 1060 30}
+          } {
+            MenuItem {} {
+              label {Add Pallet}
+              xywh {0 0 100 20}
+            }
+            MenuItem {} {
+              label {Remove pallet}
+              xywh {0 0 100 20}
+            }
+          }
+          Fl_Tabs {} {
+            label Pallets open
+            xywh {0 100 1210 745} align 5
+          } {
+            Fl_Group {} {
+              label {pallet 1} open
+              xywh {0 120 1210 725}
+            } {
+              Fl_Pack {} {
+                label Colors open
+                xywh {0 145 1075 270} box GTK_DOWN_FRAME
+              } {
+                Fl_Button {} {
+                  label {color 1}
+                  xywh {0 145 265 270} color 55 labelcolor 44
+                }
+                Fl_Button {} {
+                  label {color 2}
+                  xywh {265 145 265 270} color 52 labelcolor 44
+                }
+                Fl_Button {} {
+                  label {color 3}
+                  xywh {530 145 265 270} color 39 labelcolor 44
+                }
+                Fl_Button {} {
+                  label {color 4}
+                  xywh {795 145 265 270} color 32 labelcolor 44
+                }
+              }
+              Fl_Group {} {open selected
+                xywh {0 415 1060 425}
+              } {
+                Fl_Slider {} {
+                  label Red
+                  xywh {5 435 115 330} color 1 align 1 maximum 255
+                }
+                Fl_Slider {} {
+                  label Green
+                  xywh {125 435 115 330} color 2 align 1 maximum 255
+                }
+                Fl_Slider {} {
+                  label Blue
+                  xywh {245 435 115 330} color 4 align 1 maximum 255
+                }
+                Fl_Value_Output {} {
+                  xywh {5 770 115 65} labelcolor 1
+                }
+                Fl_Value_Output {} {
+                  xywh {125 770 115 65} labelcolor 1
+                }
+                Fl_Value_Output {} {
+                  xywh {245 770 115 65} labelcolor 1
+                }
+              }
+            }
+          }
+        }
+        Fl_Group {} {
+          label {Tileset editor} open
+          xywh {0 50 1035 750} hide
+        } {
+          Fl_Group {} {open
+            xywh {0 760 1035 40}
+          } {}
+        }
+        Fl_Group {} {
+          label {Tilemap editor} open
+          xywh {0 50 1035 750} hide
+        } {}
+      }
+    }
+  }
+}
